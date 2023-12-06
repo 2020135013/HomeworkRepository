@@ -8,7 +8,7 @@ ID: 2020135013
 Name: Seohyun Jang
 
 Created  Date: 2023-11-20
-Modified Date: 2023-11-20
+Modified Date: 2023-12-07
 """
 print('[CCO1100.01] 2023-2 Project : "Where Do The Olderly Go By Subway?"')
 
