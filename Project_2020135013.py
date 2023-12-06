@@ -19,6 +19,16 @@ import numpy as np
 from numpy.lib import recfunctions as rfn
 import matplotlib.pyplot as plt
 
+################################ from ################################
+
+import matplotlib
+import matplotlib.font_manager as fm
+
+fm.get_fontconfig_fonts()
+font_location = 'C:/Windows/Fonts/NanumMyeongjo.ttf' # For Windows
+font_name = fm.FontProperties(fname=font_location).get_name()
+matplotlib.rc('font', family=font_name)
+
 # import congestion data, congestion 100% = 160, time for congestion21 data
 name = np.genfromtxt("./서울교통공사_역별시간대별혼잡도_20221231.csv", dtype='U10', delimiter=",")[0]
 dtype = []
@@ -35,6 +45,8 @@ congestion19 = np.genfromtxt("./서울교통공사_혼잡도_20191231.csv", dtyp
 print(congestion22.shape)
 print(congestion22.dtype)
 
+################################# to #################################
+
 # import elder data
 name = np.genfromtxt("./서울교통공사_역별 권종별 우대권 승차현황_20221231.csv", dtype='U10', delimiter=",")[0]
 dtype = []
@@ -49,6 +61,8 @@ elder19 = np.genfromtxt("./서울교통공사_역별 권종별 우대권 승차�
 elder18 = np.genfromtxt("./서울교통공사_역별 권종별 우대권 승차현황_20181231.csv", dtype=dtype, skip_header=True, filling_values=0, delimiter=",", usecols=range(1, 7))
 
 print(elder22.dtype)
+
+################################ from ################################
 
 # import data by day
 name = np.genfromtxt("./서울교통공사 2021년 일별 역별 시간대별 승하차인원(1_8호선).csv", dtype='U10', delimiter=",")[0]
@@ -218,7 +232,7 @@ for num in elder20['역번호']:
 
 print(station.dtype)
 
-# from here!
+################################# to #################################
 
 # check 1 : sum of day = month
 s150_raw = np.load("./150_1호선_서울역.npy")
