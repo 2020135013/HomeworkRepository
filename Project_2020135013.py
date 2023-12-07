@@ -21,13 +21,13 @@ import matplotlib.pyplot as plt
 
 ################################ from ################################
 
-import matplotlib
-import matplotlib.font_manager as fm
+# import matplotlib
+# import matplotlib.font_manager as fm
 
-fm.get_fontconfig_fonts()
-font_location = 'C:/Windows/Fonts/NanumMyeongjo.ttf' # For Windows
-font_name = fm.FontProperties(fname=font_location).get_name()
-matplotlib.rc('font', family=font_name)
+# fm.get_fontconfig_fonts()
+# font_location = 'C:/Windows/Fonts/NanumMyeongjo.ttf' # For Windows
+# font_name = fm.FontProperties(fname=font_location).get_name()
+# matplotlib.rc('font', family=font_name)
 
 # import congestion data, congestion 100% = 160, time for congestion21 data
 name = np.genfromtxt("./서울교통공사_역별시간대별혼잡도_20221231.csv", dtype='U10', delimiter=",")[0]
